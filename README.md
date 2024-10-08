@@ -5,7 +5,7 @@ This repository houses projects that analyze single cell RNA-seq data using the 
 This project involves the doublet removal, preprocessing, integration, clustering, and manual cell type labeling of several immune cell samples from atherosclerosis plaques. It uses scanpy for single-cell analysis and scvi-tools to remove doublets and integrate the samples.
 
 ### Dataset
-The data for this project was acquired from the Gene Expression Omnibus (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE245373). The original paper that generated and studied this data was "Cross-species single-cell RNA sequencing reveals divergent phenotypes and activation states of adaptive immunity in human carotid and experimental murine atherosclerosis" by Horstmann et al. (10.1093/cvr/cvae154).
+The data for this project was acquired from the Gene Expression Omnibus (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE245373). The original paper that generated and studied this data was "Cross-species single-cell RNA sequencing reveals divergent phenotypes and activation states of adaptive immunity in human carotid and experimental murine atherosclerosis" by Horstmann et al. (DOI: 10.1093/cvr/cvae154).
 
 ### Doublet removal
 Using the scvi-tools SOLO model, doublets were predicted and removed from the sample datasets. SOLO is a generative model of scRNA-seq count data that is used to detect doublets, and this is done by first training a VAE model on a single sample, using that model to simulate doublets, then training a classifier to finally predict whether each cell in the sample is a doublet or not (https://docs.scvi-tools.org/en/stable/user_guide/models/solo.html).
